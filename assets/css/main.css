@@ -1,0 +1,397 @@
+/* Fonts */
+:root {
+  --default-font: 'Hind Siliguri', sans-serif;
+}
+
+/* Global Colors */
+:root {
+  --background-color: #ffffff;
+  --background-color-rgb: 255, 255, 255;
+  --default-color: #212529;
+  --default-color-rgb: 33, 37, 41;
+  --primary-color: #198754;
+  --primary-color-rgb: 25, 135, 84;
+  --secondary-color: #32353a;
+  --secondary-color-rgb: 50, 53, 58;
+  --contrast-color: #ffffff;
+  --contrast-color-rgb: 255, 255, 255;
+  --text-primary-color: #092753;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgba(var(--primary-color-rgb), 0.7);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--secondary-color);
+  font-family: var(--default-font);
+}
+
+section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  overflow: clip;
+}
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: rgba(var(--primary-color-rgb), 0.8);
+  color: #ffffff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: var(--background-color);
+  transition: all 0.6s ease-out;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#preloader div {
+  width: 13px;
+  height: 13px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  position: absolute;
+  left: 50%;
+}
+
+#preloader div:nth-child(1) {
+  left: calc(50% + 8px);
+  animation: animate-preloader-1 0.6s infinite;
+}
+
+#preloader div:nth-child(2) {
+  left: calc(50% + 8px);
+  animation: animate-preloader-2 0.6s infinite;
+}
+
+#preloader div:nth-child(3) {
+  left: calc(50% + 32px);
+  animation: animate-preloader-2 0.6s infinite;
+}
+
+#preloader div:nth-child(4) {
+  left: calc(50% + 56px);
+  animation: animate-preloader-3 0.6s infinite;
+}
+
+@keyframes animate-preloader-1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate-preloader-3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes animate-preloader-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Banner section
+--------------------------------------------------------------*/
+#hero {
+  padding: 0px 0px;
+}
+#hero img {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Note Banner section
+--------------------------------------------------------------*/
+#note {
+  background: #0d914610;
+}
+#note .note-text h4 {
+  color: #1d4943;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 13px;
+}
+#note .note-text p {
+  margin-bottom: 0px;
+  color: #092753;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 29px;
+}
+
+/*--------------------------------------------------------------
+# Division Electoral Section
+--------------------------------------------------------------*/
+#Division .Division-contact h4 {
+  position: relative;
+  font-weight: 600;
+  color: #1d4943;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#Division .Division-ap {
+  text-align: center;
+  margin-top: 20px;
+}
+#Division .Division-ap img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#Division .Division-ap h4 {
+  padding-top: 10px;
+  color: #ff483c;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+#Division .Division-ap p {
+  margin-bottom: 0px;
+  color: #092753;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 29px;
+}
+/*--------------------------------------------------------------
+# Banner design
+--------------------------------------------------------------*/
+#bannerDesign {
+  background: #0d914610;
+}
+#bannerDesign .update-content h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #092753;
+}
+.banner01 {
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+.banner02 {
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+#bannerDesign .bannerDesign-title h4 {
+  font-weight: 600;
+  color: #1d4943;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.bannerDesign .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.bannerDesign .php-email-form .form-group {
+  margin-bottom: 20px;
+}
+.bannerDesign .php-email-form label {
+  padding-bottom: 8px;
+}
+.bannerDesign .php-email-form input,
+.bannerDesign .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.bannerDesign .php-email-form input:focus,
+.bannerDesign .php-email-form textarea:focus {
+  border-color: #198754;
+}
+.bannerDesign .php-email-form input {
+  height: 38px;
+}
+.bannerDesign .php-email-form .dowland-btn {
+  background: #198754;
+  border: 0;
+  padding: 12px 34px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.bannerDesign .php-email-form .dowland-btn:hover {
+  background: #157347;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  font-size: 14px;
+  background-color: #1f1f24;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer .icon {
+  margin-right: 15px;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: #fff;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+}
+
+.footer .credits {
+  padding-top: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer .credits a {
+  color: #198754;
+}
